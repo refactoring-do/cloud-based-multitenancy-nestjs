@@ -1,0 +1,11 @@
+# Application
+APP_PORT=5000
+
+# Development Database
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root   
+DB_PASSWORD=root
+DB_NAME=multitenancy
+DB_VOLUME_PATH=./docker/mysql/volumes
+DB_LISTEN_PORT_OUT=3306
