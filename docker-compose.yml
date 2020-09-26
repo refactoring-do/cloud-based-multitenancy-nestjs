@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  database:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    ports:
+      - ${DB_LISTEN_PORT_OUT}:${DB_PORT}
+    volumes:
+      - ${DB_VOLUME_PATH}:/var/lib/mysql
