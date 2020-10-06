@@ -7,6 +7,7 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: nesttenancy
+  DOCKER_PACKAGE_NAME: nestjsmultitenant
   REGISTRY_SERVER: docker.pkg.github.com/refactoring-do/cloud-based-multitenancy-nestjs
 jobs:
   build-and-deploy:
@@ -25,13 +26,13 @@ jobs:
         uses: VaultVulp/gp-docker-action@1.1.7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          image-name: ${{ env.AZURE_WEBAPP_NAME }}
+          image-name: ${{ env.DOCKER_PACKAGE_NAME }}
           image-tag: ${{github.sha}}
 
       - uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          images: "${{ env.REGISTRY_SERVER }}/${{ env.AZURE_WEBAPP_NAME }}:${{ github.sha }}"
+          images: "${{ env.REGISTRY_SERVER }}/${{ env.DOCKER_PACKAGE_NAME }}:${{ github.sha }}"
 
       - uses: azure/appservice-settings@v1
         with:
