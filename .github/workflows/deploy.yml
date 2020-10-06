@@ -13,7 +13,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # checkout the repo
       - name: "Checkout Github Action"
         uses: actions/checkout@master
 
@@ -29,12 +28,14 @@ jobs:
           image-name: ${{ env.DOCKER_PACKAGE_NAME }}
           image-tag: ${{github.sha}}
 
-      - uses: azure/webapps-deploy@v2
+      - name: Publish to Azure WebApp
+        uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           images: "${{ env.REGISTRY_SERVER }}/${{ env.DOCKER_PACKAGE_NAME }}:${{ github.sha }}"
 
-      - uses: azure/appservice-settings@v1
+      - name: Configuring WebApp settings
+        uses: azure/appservice-settings@v1
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           app-settings-json: |
