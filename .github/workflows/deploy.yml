@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - develop
 
 env:
   AZURE_WEBAPP_NAME: nesttenancy
