@@ -16,7 +16,7 @@ npm i
 ```
 
 ```shell
-docker-compuse up -d
+docker-compose up -d
 ```
 
 ```shell
