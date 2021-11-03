@@ -21,18 +21,18 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^7.0.0",
-    "@nestjs/config": "^0.5.0",
-    "@nestjs/core": "^7.0.0",
-    "@nestjs/platform-express": "^7.0.0",
-    "@nestjs/typeorm": "^7.1.4",
-    "class-transformer": "^0.3.1",
-    "class-validator": "^0.12.2",
+    "@nestjs/common": "^8.1.2",
+    "@nestjs/config": "^1.0.3",
+    "@nestjs/core": "^8.1.2",
+    "@nestjs/platform-express": "^8.1.2",
+    "@nestjs/typeorm": "^8.0.2",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.5.4",
-    "typeorm": "^0.2.26"
+    "rxjs": "^7.4.0",
+    "typeorm": "^0.2.38"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.0.0",
