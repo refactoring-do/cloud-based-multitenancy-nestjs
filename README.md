@@ -26,5 +26,7 @@ nest start --watch
 ## Authors
 
 - [Marluan Espiritusanto](https://twitter.com/MarluanGuerrero)
-- [Alexis Mateo](https://twitter.com/AlexisMateo23)
-- [Jadhiel Vélez](https://github.com/Jadhielv)
+- [Alexis Mateo](https://twitter.com/alexismateod)
+
+## Contributors
+- [Jadhiel Vélez](https://twitter.com/JadhielV)
